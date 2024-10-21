@@ -2,12 +2,12 @@ name: Ejecutar Script Diario
 
 on:
   schedule:
-   - cron: '49 12 * * *'
-
+    - cron: '49 12 * * *'
+  workflow_dispatch:  # Esto habilita la ejecución manual
 
 jobs:
   run-script:
-    runs-on: ubuntu-latest  # Usar una máquina Ubuntu en GitHub Actions
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -23,5 +23,4 @@ jobs:
           # pip install -r requirements.txt  # Instalar dependencias si es necesario
 
       - name: Run Python Script
-        run: |
-          python tarea_git_auto.py
+        run: python tarea_git_auto.py
