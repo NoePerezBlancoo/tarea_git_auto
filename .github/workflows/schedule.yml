@@ -2,7 +2,8 @@ name: Ejecutar Script Diario
 
 on:
   schedule:
-    - cron: '0 3 * * *'  # Todos los días a las 3 a.m. UTC
+   - cron: '47 13 * * *'
+# Todos los días a las 3 a.m. UTC
 
 jobs:
   run-script:
